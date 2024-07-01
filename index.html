@@ -8,33 +8,33 @@
 </head>
 <body>
 
-<div id="header">
-    <div id="saldo-uang">Saldo: <span id="saldo-amount">Rp 100,000</span></div>
-    <div id="betting-section">
-        <label for="bet-amount">Masukkan taruhan:</label>
-        <input type="number" id="bet-amount" min="0" step="1000">
-        <button id="place-bet">Pasang Taruhan</button>
+    <div id="header">
+        <div id="saldo-uang">Saldo: <span id="saldo-amount">Rp 100,000</span></div>
+        <div id="betting-section">
+            <label for="bet-amount">Masukkan taruhan:</label>
+            <input type="number" id="bet-amount" min="0" step="1000">
+            <button id="place-bet">Pasang Taruhan</button>
+        </div>
     </div>
-</div>
 
-<div id="game-container">
-    <div id="grid"></div>
-    <div id="message">Pilih kotak untuk mencari apel!</div>
-    <div id="action-buttons">
-        <button id="claim-prize" style="display: none;">Ambil Kemenangan</button>
-        <button id="restart-button" style="display: none;">Restart</button>
+    <div id="game-container">
+        <div id="grid"></div>
+        <div id="message">Pilih kotak untuk mencari apel!</div>
+        <div id="action-buttons">
+            <button id="claim-prize" style="display: none;">Ambil Kemenangan</button>
+            <button id="restart-button" style="display: none;">Restart</button>
+        </div>
     </div>
-</div>
 
-<!-- Popup -->
-<div id="win-popup" class="popup" style="display: none;">
-    <div class="popup-content">
-        <span class="close" id="close-popup">&times;</span>
-        <p>Congratulations! You found the apple!</p>
-        <button id="play-again">Play Again</button>
+    <!-- Popup -->
+    <div id="win-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close" id="close-popup">&times;</span>
+            <p>Congratulations! You found the apple!</p>
+            <button id="play-again">Play Again</button>
+        </div>
     </div>
-</div>
 
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
