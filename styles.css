@@ -52,17 +52,86 @@ body {
 #bet-amount {
     padding: 5px;
     margin-right: 10px;
+    margin-left: auto;
+  height: 2.5em;
+  width: 12.5em;
+  border-radius: 2.5em;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  -webkit-filter: drop-shadow(1px 1px 10px #000);
+  filter: drop-shadow(7px 7px 10px #00000059);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(77, 77, 77);
+  text-align: center;
+  font-size: 14px;
+  outline: 2px solid rgba(0, 0, 0, 0);
+  transition: outline-offset 0.5s ease, outline-color 0.5s ease,
+    height 0.5s ease, width 0.5s ease, filter 0.5s ease;
+}
+
+.bet-amount:focus {
+    outline-offset: 0.5em;
+    outline-color: rgba(0, 0, 0, 0.228);
+    transition: 0.2s;
+    height: 3em;
+    width: 13em;
+    -webkit-filter: drop-shadow(1px 1px 10px #000);
+    filter: drop-shadow(-7px 7px 10px #00000059);
+}
+
+.bet-amount:focus {
+    outline-offset: 0.5em;
+    outline-color: rgba(0, 0, 0, 0.228);
+    transition: 0.2s;
+    height: 3em;
+    width: 13em;
+    -webkit-filter: drop-shadow(1px 1px 10px #000);
+    filter: drop-shadow(-7px 7px 10px #00000059);
+}
+  
+.bet-amount::placeholder {
+    padding-left: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transform: translateX(-6px);
+    transition: transform 0.5s ease;
+}
+  
+.bet-amount:focus::placeholder {
+    transform: translateX(-85px);
+    transition: 0.5s;
 }
 
 #place-bet {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease-in-out;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+}
+
+button:hover {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+button:active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+button:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
 #place-bet:hover {
@@ -95,20 +164,23 @@ body {
 .box {
     width: 100%;
     height: 60px;
-    background-color: #fff;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-    border: 2px solid #ddd;
-    transition: background-color 0.3s, transform 0.3s;
+    background: lightgrey;
+  border: 3px inset white;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5, inset -20px -20px 60px #ffffff;
+  transition: all .5s ease-in-out;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  color: #8a8989;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .box:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
+    transform: translateY(-5px);
+  transition: all .5s ease-in-out;
 }
 
 .box.won {
@@ -318,3 +390,4 @@ body {
         font-size: 12px;
     }
 }
+
